@@ -1,7 +1,7 @@
 function TreeNode(data) {
 
-  	this.data = data;
-  	this.children = [];
+   this.data = data;
+   this.children = [];
 
    this.addChild = function(data) {
 
@@ -28,15 +28,15 @@ function TreeNode(data) {
       this.children.forEach(child => child.depthFirstTraversal());
    }
 
-	this.breadthFirstTraversal = function() {
-		let queue = [this];
+   this.breadthFirstTraversal = function() {
+	let queue = [this];
 
-		while (queue.length) {
-		  const current = queue.shift();
-		  console.log(current.data);
-		  queue = queue.concat(current.children);
-		}
+	while (queue.length) {
+	   const current = queue.shift();
+	   console.log(current.data);
+	   queue = queue.concat(current.children);
 	}
+   }
 
    this.print = function (level = 0) {
       let result = '';
